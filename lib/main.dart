@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
+import 'layouts/home_screen.dart';
 
-class HomeScreen extends StatelessWidget {
-  @override Widget build(BuildContext context) {
-    return
-      Material( color: Colors.lightBlueAccent,
-          child: Center(
-              child: Text( "Hello world",
-                  textDirection: TextDirection.ltr,
-                  style: TextStyle(color: Colors.white,
-                      fontSize: 30)
-              )
-          )
-      );
+
+void main() => runApp(MyFlutterApp());
+
+
+class MyFlutterApp extends StatelessWidget{
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return  MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: "First App",
+        home: Scaffold(
+            appBar: AppBar(
+                title: Text("Hello Flutter")
+            ),
+            body: HomeScreen()
+        )
+    );
   }
 }
+
 
